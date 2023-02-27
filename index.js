@@ -2,6 +2,7 @@ const ProductManager = require("./class/ProductManager");
 
 const product = new ProductManager();
 
+//Verifica la construccion del producto
 product.addProduct({
     title: 'producto prueba',
     description: 'Este es un producto prueba',
@@ -11,6 +12,7 @@ product.addProduct({
     stock: 25
 });
 
+//Verifica que se crea incrementando un nuevo ID
 product.addProduct({
     title: 'producto prueba 2',
     description: 'Este es un producto prueba 2',
@@ -20,6 +22,7 @@ product.addProduct({
     stock: 25
 });
 
+//Verifica que todos los campos esten completos
 product.addProduct({
     title: 'producto prueba 2',
     description: 'Este es un producto prueba 2',

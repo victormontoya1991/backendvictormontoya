@@ -5,11 +5,12 @@ class ProductManager {
         this.#products = [];
     }
     addProduct(product) {
-        // Verificar que el código no esté repetido y que todos los campos estén completos
+        // Verificar que el codigo no este repetido y que todos los campos esten completos
         if (this.#products.some(p => p.code === product.code)) {
             console.log('El código del producto ya existe');
             return;
         }
+        // Verificar que no le faltan datos al nuevo producto
         if (!product.title || !product.description || !product.price || !product.thumbnail || !product.code || !product.stock) {
             console.log('Faltan datos del producto');
             return;
@@ -18,6 +19,7 @@ class ProductManager {
         const newProduct = {...product, id: ++this.#id};
         this.#products.push(newProduct);
     }
+    // Verificar que el producto se encuentre
     getProductById(id) {
         const product = this.#products.find(p => p.id === id);
         if (!product) {
@@ -25,6 +27,7 @@ class ProductManager {
         }
         return item;
     }
+    // Retorno del contructor
     getProducts() {
         return this.#products;
     }
