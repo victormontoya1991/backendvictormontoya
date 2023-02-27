@@ -23,7 +23,7 @@ class ProductManager {
         if (!product) {
             console.log('Producto no encontrado');
         }
-        return product;
+        return item;
     }
     getProducts() {
         return this.#products;
